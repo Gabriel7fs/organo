@@ -1,0 +1,11 @@
+<section>
+  <h2 class="text-title">
+    Minhas leituras
+  </h2>
+  <span class="highlight-line large-highlighted-line"></span>
+</section>
+
+@for (types of literaryTypes; track types) {
+  <app-literary-types [types]="types"></app-literary-types>
+}
+

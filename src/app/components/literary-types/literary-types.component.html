@@ -1,0 +1,18 @@
+<section class="literary-types">
+  <h3 class="literary-types-title">
+    {{ types().value }}
+    <span class="highlight-line small-highlight--line" [ngClass]="types().id"></span>
+  </h3>
+  @if (types().livros.length == 0) {
+    <div class="books-not-found">
+      <img src="broken_image.png" alt="">
+      <span>Sem livros nessa categoria!</span>
+    </div>
+  }
+  <div class="books">
+    @for (book of types().livros; track book) {
+      <app-book [library]="book"></app-book>
+    }
+  </div>
+</section>
+

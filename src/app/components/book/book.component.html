@@ -1,0 +1,12 @@
+<section [ngClass]="library().genero.id">
+  <button class="favorite-btn" (click)="toggleFavorite()">
+    <span>{{library().favorito ? '❤️' : '🤍'}}</span>
+  </button>
+  <div class="image">
+    <img [src]="library().imagem" [alt]="library().titulo">
+  </div>
+  <div class="info-book">
+    <h2 class="title-book">{{ library().titulo }}</h2>
+    <h3 class="author-book">{{ library().autor }}</h3>
+  </div>
+</section>
